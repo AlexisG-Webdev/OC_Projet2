@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'AkiraExpanded';
+    src: url('./fonts/AkiraExpanded-SuperBold.woff2') format('woff2'),
+        url('./fonts/AkiraExpanded-SuperBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-family: 'AkiraExpanded';
+    background-color: rgb(66,165,245);
+    border: 0px solid black;
+    box-shadow: 1px 2.5px 5px 2.5px rgb(30,136,229);
+    padding: 5px;
+    width: 100%;
+    position : sticky;
+    top: 0;
+}
+
+header h1{
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-image: url('./img/abstrait-bleu-formes-geometriques.png');
+    background-repeat: repeat-y;
+    align-items: center;
+}
+
+#contact{
+    font-family: 'AkiraExpanded';
+    font-size: 0.75em;
+    text-align: center;
+    background-color: rgb(144,202,249);
+    border-radius: 2.5%;
+    box-shadow: 2.5px 2.5px 5px 2.5px rgb(30,136,229);
+    padding: 15px;
+}
+
+
+#contact h2{
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+#contact table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact td:first-child{
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+#contact td, 
+#contact a:hover{
+    color: rgb(30,136,229);
+}
+
+#contact a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#experience,
+#formation,
+#skills{
+    display: grid;
+    width: 50%;
+    font-family: 'Geo', sans-serif;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(66,165,245);
+    box-shadow: 1px -2.5px 5px 2.5px rgb(30,136,229);
+    font-weight: bolder;
+    padding: 15px;
+    width: 100%;
+}
+
+footer a{
+    font-family: 'AkiraExpanded';
+    display: block;
+    padding: 10px;
+    color:whitesmoke;
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (min-width: 640px) {
+    header h1{font-size: 3em;}
+    #contact{
+        position : fixed;
+        top: 40%;
+        left: 25PX;
+        width: 15%;
+        width: auto;
+        }
+}
