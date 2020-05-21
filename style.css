@@ -51,12 +51,22 @@
 
 #informations h2{
     font-family: 'AkiraExpanded';
-    text-align: center;
     width: 100%;
     background-color:rgb(66,66,66);
 }
 
-#contact table,
+#informations h2,
+#content h2{
+    text-align: center;
+}
+
+#informations p,
+#content p{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+}
+
 #experience table,
 #formation table,
 #picture{
@@ -64,6 +74,13 @@
     margin-right: auto;
 }
 
+#picture{
+    overflow: hidden;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-top: 15px;
+}
 
 #contact a,
 #footer a{
@@ -72,9 +89,10 @@
 
 #experience,
 #formation,
-#skills{
+#skills,
+#informations{
     width: 100%;
-    font-family: 'Geo', sans-serif;
+    font-family: 'Titillium Web';
 }
 
 
@@ -82,7 +100,7 @@ footer{
     display: flex;
     justify-content: center;
     background-color: rgb(66,66,66);
-    padding: 25px;
+    padding: 20px;
     width: 100%;
 }
 
