@@ -1,52 +1,56 @@
 @font-face {
     font-family: 'AkiraExpanded';
-    src: url('./fonts/AkiraExpanded-SuperBold.woff2') format('woff2'),
+    src        : url('./fonts/AkiraExpanded-SuperBold.woff2') format('woff2'),
         url('./fonts/AkiraExpanded-SuperBold.woff') format('woff');
     font-weight: 800;
-    font-style: normal;
+    font-style : normal;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
-.italic{
+.italic {
     font-style: italic;
 }
 
-.textAlignRight{
+.textAlignRight {
     text-align: right;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
 }
 
 #header,
 #informations h2,
-footer,
-#experience,
-#formation,
-#skills,
-#informations{
+#footer,
+#content,
+#informations {
     width: 100%;
 }
 
-#experience table{
+#experience table {
     width: 85%;
 }
 
-#header{
-    display: flex;
-    flex-direction: column;
+#header {
     align-items: center;
-    position : sticky;
-    top: 0;
+    position   : sticky;
+    top        : 0;
 }
 
-#header h1{
+#header h1 {
     font-size: 1.5em;
 }
 
 #header p,
 #informations h2,
-#footer a{
+#footer a {
     font-size: 1em;
 }
 
@@ -55,32 +59,28 @@ footer,
 #contact a,
 #footer a,
 .whiteFont,
-i.fas{
+i.fas {
     color: whitesmoke;
 }
 
 #contact a:hover,
 #footer a:hover,
-#header h1{
-    color: rgb(30,136,229);
+#header h1 {
+    color: rgb(30, 136, 229);
 }
 
 #header,
 #informations h2,
-footer
-{
+footer {
     font-family: 'AkiraExpanded';
 }
 
-#informations{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(30,136,229);
+#informations {
+    background-color: rgb(30, 136, 229);
 }
 
-#hobbiesIcons{
-    display: flex;
-    flex-wrap: wrap;
+#hobbiesIcons {
+    flex-wrap      : wrap;
     justify-content: space-around;
 }
 
@@ -88,82 +88,89 @@ footer
 #informations h2,
 footer,
 #contact i.fas,
-#hobbies i.fas{
-    background-color: rgb(66,66,66);
+#hobbies i.fas {
+    background-color: rgb(66, 66, 66);
 }
 
 #contact i.fas,
-#hobbies i.fas{
-    display: inline-flex;
+#hobbies i.fas {
+    display        : inline-flex;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
 }
 
-#contact i.fas{
-    width: 30px;
-    height: 30px;
+#contact i.fas {
+    width        : 30px;
+    height       : 30px;
     border-radius: 25%;
-    margin: 20px;
+    margin       : 20px;
 }
 
-#hobbies i.fas{
-    width: 65px;
-    height: 65px;
+#hobbies i.fas {
+    width        : 65px;
+    height       : 65px;
     border-radius: 50%;
 }
 
 #informations h2,
-#content h2{
+#content h2 {
     text-align: center;
 }
 
 #content p,
-#informations p{
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: justify;
+#informations p {
+    padding-left : 10px;
+    padding-right: 10px;
+    text-align   : justify;
 }
 
 #experience table,
 #formation ul,
-#picture{
-    margin-left: auto;
+#picture {
+    margin-left : auto;
     margin-right: auto;
 }
 
 #header h1,
 #hobbiesIcons,
-#footer{
+#footer {
     padding: 20px;
 }
 
-#picture{
-    overflow: hidden;
+#picture {
+    overflow     : hidden;
     border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    margin-top: 15px;
+    height       : 250px;
+    width        : 250px;
+    margin-top   : 15px;
 }
 
 #contact a,
-#footer a{
+#footer a {
     text-decoration: none;
 }
 
 #experience,
 #formation,
 #skills,
-#informations{
+#informations {
     font-family: 'Titillium Web';
 }
 
 
-footer{
-    display: flex;
+#footer {
     justify-content: center;
 }
 
-footer a{
-    display: block;
+#footer a {
+    display    : block;
     margin-left: -40px;
 }
+
+/* tablettes */
+
+@media only screen and (min-width: 768px) {}
+
+/* ordinateurs */
+
+@media only screen and (min-width: 1200px) {}
