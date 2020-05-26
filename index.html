@@ -12,28 +12,35 @@
 </head>
 
 <body id="topOfPage">
-    <header id="header" class="container column">
+    <header id="header" class="container column" style="
+    width: 70%;
+    float: right;
+">
 
         <h1>ALEXIS <span class="whiteFont">GEORGES</span></h1>
         <p>Developpeur Web Font</p>
 
 
     </header>
-    <aside id="informations" class="container column">
+    <aside id="informations" class="container column" style="
+    width: 30%;
+    position: absolute;
+    left: 0;
+    min-height: 3000px;
+">
 
-        <div id="picture"><a class="pic" href="./img/photoAlexis.jpg" target="_blank"><img
-                    src="./img/miniPhotoAlexis.jpg" alt="photo cv"></a></div>
+        <div id="picture"><a class="pic" href="./img/photoAlexis.jpg" target="_blank"><img src="./img/miniPhotoAlexis.jpg" alt="photo cv"></a></div>
 
         <article id="contact">
             <h2>Contact</h2>
 
-            <p><i class="fas fa-envelope"></i>
+            <p><i class="fas fa-envelope" aria-hidden="true"></i>
                 alexis.georges54@gmail.com</p>
 
-            <p><i class="fas fa-phone-alt"></i>
+            <p><i class="fas fa-phone-alt" aria-hidden="true"></i>
                 06.00.00.00.00</p>
 
-            <p><i class="fas fa-map-marker-alt"></i>
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 57000 Metz</p>
         </article>
 
@@ -47,24 +54,27 @@
         <article id="hobbies">
             <h2>Loisirs</h2>
             <div id="hobbiesIcons" class="container">
-                <i class="fas fa-gamepad fa-2x fa-fw"></i>
-                <i class="fas fa-compact-disc fa-2x fa-fw"></i>
-                <i class="fas fa-palette fa-2x fa-fw"></i>
-                <i class="fas fa-bread-slice fa-2x fa-fw"></i>
-                <i class="fas fa-laptop fa-2x fa-fw"></i>
-                <i class="fas fa-book fa-2x fa-fw"></i>
-                <i class="fas fa-language fa-2x fa-fw"></i>
+                <i class="fas fa-gamepad fa-2x fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-compact-disc fa-2x fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-palette fa-2x fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-bread-slice fa-2x fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-laptop fa-2x fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-book fa-2x fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-language fa-2x fa-fw" aria-hidden="true"></i>
             </div>
         </article>
     </aside>
 
-    <main id="content" class="container column">
+    <main id="content" class="container column" style="
+    width: 70%;
+    float: right;
+">
         <article id="experience">
             <h2>Expériences Professionnelles</h2>
 
             <h3>Pâtissier</h3>
             <table>
-                <tr>
+                <tbody><tr>
                     <td class="bold">Boulangerie "L'Atelier du pain"</td>
                     <td class="textAlignRight">Metz (57)</td>
                 </tr>
@@ -149,11 +159,11 @@
                         </ul>
                     </td>
                 </tr>
-            </table>
+            </tbody></table>
 
             <h3>Vendeur à Domicile Indépendant</h3>
             <table>
-                <tr>
+                <tbody><tr>
                     <td class="bold">Guy Demarle</td>
                     <td class="textAlignRight">Lorraine</td>
                 </tr>
@@ -170,11 +180,11 @@
                         </ul>
                     </td>
                 </tr>
-            </table>
+            </tbody></table>
 
             <h3>Auxiliaire de Vie Scolaire</h3>
             <table>
-                <tr>
+                <tbody><tr>
                     <td class="bold">Lycée René Cassin</td>
                     <td class="textAlignRight">Metz (57)</td>
                 </tr>
@@ -207,7 +217,7 @@
                         </ul>
                     </td>
                 </tr>
-            </table>
+            </tbody></table>
 
         </article>
 
@@ -271,6 +281,45 @@
     <footer id="footer" class="container">
         <a href="#topOfPage">Haut de Page</a>
     </footer>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
 </body>
 
 </html>
