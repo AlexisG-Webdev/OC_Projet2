@@ -6,17 +6,99 @@
     font-style : normal;
 }
 
-.bold {
-    font-weight: bold;
+/*** PHOTO ***/
+
+#picture {
+    overflow     : hidden;
+    border-radius: 50%;
+    height       : 250px;
+    width        : 250px;
+    margin-top   : 15px;
+    margin-left : auto;
+    margin-right: auto;
 }
 
-.italic {
-    font-style: italic;
+/*** FONTS, STYLE ET COULEURS ***/
+
+#header,
+#informations h2,
+footer {
+    font-family: 'AkiraExpanded';
 }
 
-.textAlignRight {
-    text-align: right;
+#mainContent {
+    font-family: 'Titillium Web';
 }
+
+#header h1 {
+    font-size: 1.5em;
+}
+
+#header p,
+#informations h2,
+#footer a,
+.sectionTitle h2 {
+    font-size: 1.25em;
+}
+
+#informations,
+.content{
+    font-size: 1em;
+}
+
+#header,
+#mainContent h2 {
+    text-align    : center;
+    text-transform: uppercase;
+}
+
+.blueUnderline {
+    text-decoration      : underline;
+    text-decoration-color: rgb(30, 136, 229);
+}
+
+#header,
+#informations h2,
+#informations a:hover,
+#footer a,
+#informations i.fas,
+#contact i.fab {
+    color: whitesmoke;
+}
+
+#footer a:hover,
+#sectionContent i.fas,
+#sectionContent i.far,
+.blueFont {
+    color: rgb(30, 136, 229);
+}
+
+#informations a {
+    color: rgb(66, 66, 66);
+}
+
+#informations,
+#sectionContent li::before {
+    background-color: rgb(30, 136, 229);
+}
+
+#header,
+#informations h2,
+footer,
+#contact i.fas,
+#hobbies i.fas,
+#contact i.fab {
+    background-color: rgb(66, 66, 66);
+}
+
+
+
+.lightGrayBack{
+    background-color: rgb(224,224,224);
+
+}
+
+/*** MISE EN PAGE ***/
 
 .container {
     display: flex;
@@ -26,57 +108,9 @@
     flex-direction: column;
 }
 
-#header,
-#informations h2,
-#footer,
-#content,
-#informations {
-    width: 100%;
-}
-
-#experience table {
-    width: 85%;
-}
-
-#header {
-    align-items: center;
-    position   : sticky;
-    top        : 0;
-}
-
-#header h1 {
-    font-size: 1.5em;
-}
-
-#header p,
-#informations h2,
-#footer a {
-    font-size: 1em;
-}
-
-#header p,
-#informations h2,
-#contact a,
-#footer a,
-.whiteFont,
-i.fas {
-    color: whitesmoke;
-}
-
-#contact a:hover,
-#footer a:hover,
-#header h1 {
-    color: rgb(30, 136, 229);
-}
-
-#header,
-#informations h2,
-footer {
-    font-family: 'AkiraExpanded';
-}
-
-#informations {
-    background-color: rgb(30, 136, 229);
+.sectionTitle {
+    align-items    : baseline;
+    justify-content: center;
 }
 
 #hobbiesIcons {
@@ -84,22 +118,15 @@ footer {
     justify-content: space-around;
 }
 
-#header,
-#informations h2,
-footer,
 #contact i.fas,
+#contact i.fab,
 #hobbies i.fas {
-    background-color: rgb(66, 66, 66);
+    display: inline-flex;
+    align-items: center;
 }
 
 #contact i.fas,
-#hobbies i.fas {
-    display        : inline-flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-#contact i.fas {
+#contact i.fab {
     width        : 30px;
     height       : 30px;
     border-radius: 25%;
@@ -112,60 +139,50 @@ footer,
     border-radius: 50%;
 }
 
-#informations h2,
-#content h2 {
-    text-align: center;
+/*** LISTES ***/
+
+#sectionContent ul li {
+    list-style-type: none;
+    /* margin-left    : -40px; */
 }
 
-#content p,
-#informations p {
-    padding-left : 10px;
-    padding-right: 10px;
-    text-align   : justify;
+#sectionContent ul ul li {
+    list-style-type: square;
 }
 
-#experience table,
-#formation ul,
-#picture {
-    margin-left : auto;
-    margin-right: auto;
-}
 
-#header h1,
+
 #hobbiesIcons,
 #footer {
     padding: 20px;
 }
 
-#picture {
-    overflow     : hidden;
-    border-radius: 50%;
-    height       : 250px;
-    width        : 250px;
-    margin-top   : 15px;
-}
-
-#contact a,
-#footer a {
-    text-decoration: none;
-}
-
-#experience,
-#formation,
-#skills,
-#informations {
-    font-family: 'Titillium Web';
-}
 
 
-#footer {
+#footer,
+#contact i.fas,
+#hobbies i.fas,
+#contact i.fab {
     justify-content: center;
 }
 
 #footer a {
     display    : block;
-    margin-left: -40px;
+    margin-left: -12.5px;
 }
+
+#informations a,
+#footer a {
+    text-decoration: none;
+}
+
+#sectionContent i.fas,
+#sectionContent i.far {
+    padding-top : 21.5px;
+    margin-right: 25px;
+}
+
+
 
 /* tablettes */
 
@@ -173,4 +190,6 @@ footer,
 
 /* ordinateurs */
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+
+}
