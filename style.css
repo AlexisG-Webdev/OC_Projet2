@@ -6,6 +6,12 @@
     font-style : normal;
 }
 
+/* .content:hover {
+    background-color: rgb(238, 238, 238);
+    padding-left    : 10px;
+} */
+
+
 /*** PHOTO ***/
 
 #picture {
@@ -14,8 +20,8 @@
     height       : 250px;
     width        : 250px;
     margin-top   : 20px;
-    margin-left : auto;
-    margin-right: auto;
+    margin-left  : auto;
+    margin-right : auto;
 }
 
 /*** FONTS, STYLE ET COULEURS ***/
@@ -36,14 +42,14 @@ footer {
 
 #header p,
 #informations h2,
-#footer a,
 .sectionTitle h2 {
-    font-size: 1.25em;
+    font-size: 1.2em;
 }
 
 #informations,
-.content{
-    font-size: 1em;
+#footer a,
+.content {
+    font-size: 0.85em;
 }
 
 #header,
@@ -91,6 +97,9 @@ footer,
     background-color: rgb(66, 66, 66);
 }
 
+.content div:first-child {
+    font-style: italic;
+}
 
 /*** MISE EN PAGE ***/
 
@@ -115,7 +124,7 @@ footer,
 #contact i.fas,
 #contact i.fab,
 #hobbies i.fas {
-    display: inline-flex;
+    display    : inline-flex;
     align-items: center;
 }
 
@@ -133,15 +142,27 @@ footer,
     border-radius: 50%;
 }
 
+.content-description {
+    margin-left  : 39px;
+    margin-top   : -15px;
+    margin-bottom: 25px;
+    padding-right: 20px;
+}
+
+#about p {
+    margin    : 5%;
+    text-align: justify;
+}
+
 /*** LISTES ***/
 
 #sectionContent ul li {
     list-style-type: none;
-    margin-left    : -15px;
+    margin-left    : -20px;
 }
 
 #sectionContent ul ul li {
-    list-style-type: square;
+    margin-left: -40px;
 }
 
 #hobbiesIcons,
@@ -168,25 +189,69 @@ footer,
 
 #sectionContent i.fas,
 #sectionContent i.far {
-    padding-top : 21.5px;
-    margin-right: 25px;
+    padding-top : 22px;
+    margin-right: 10px;
 }
 
-/* tablettes */
 
-@media only screen and (min-width: 667px) {
+/************************************************/
+/*** tablettes et smartphones bascule d'écran ***/
+/************************************************/
+
+@media only screen and (min-width: 650px) {
+
+    #header h1 {
+        font-size: 2.5em;
+    }
+
+    #header p,
+    #informations h2,
+    .sectionTitle h2 {
+        font-size: 1.5em;
+    }
+
+    #informations,
+    #footer a,
+    .content {
+        font-size: 1em;
+    }
+
     .content {
         flex-direction: row;
     }
-    .content div{
+
+    .content div {
         width: 50%;
+    }
+
+    #informations {
+        min-width: 35%;
+    }
+
+    #contact p {
+        width       : 325px;
+        margin-left : auto;
+        margin-right: auto;
+    }
+
+    .content-description {
+        margin-left  : unset;
+        margin-top   : unset;
+        margin-bottom: unset;
+    }
+
+    #sectionContent i.fas,
+    #sectionContent i.far {
+        margin-right: 20px;
     }
 }
 
-
-/* ordinateurs */
+/*******************/
+/*** ordinateurs ***/
+/*******************/
 
 @media only screen and (min-width: 1200px) {
+
     #mainContent,
     .content {
         flex-direction: row;
@@ -197,14 +262,15 @@ footer,
         height          : 200px;
         color           : rgb(66, 66, 66);
         background-color: unset;
+        margin-bottom   : 2.5%;
     }
 
     #header h1 {
-        font-size: 2.5em;
+        font-size: 3.5em;
     }
 
     #header p {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     #header h1,
@@ -213,25 +279,36 @@ footer,
         text-align: left;
     }
 
+    #contact p {
+        width: 100%;
+    }
 
     #informations {
-        width: 40%;
-        position: sticky;
-        top: 0;
-        height: 100%;
+        min-width: unset;
+        max-width: 25%;
+        position : sticky;
+        top      : 0;
+        height   : 100%;
     }
 
     #sectionContent {
-        margin: 2.5%;
-        order : 2;
+        margin     : 1.5%;
+        margin-left: 7.5%;
+        order      : 2;
+        width      : auto;
     }
 
     .sectionTitle {
         justify-content: start;
     }
 
-    .content div:first-child {
-        width: 30%;
+    #sectionContent ul li {
+        margin-left: -40px;
+
+    }
+
+    .content-description{
+        margin-left: -75px;
     }
 
 }
