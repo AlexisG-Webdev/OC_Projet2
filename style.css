@@ -6,10 +6,10 @@
     font-style : normal;
 }
 
-/* .content:hover {
+.content:hover {
     background-color: rgb(238, 238, 238);
     padding-left    : 10px;
-} */
+}
 
 
 /*** PHOTO ***/
@@ -17,9 +17,10 @@
 #picture {
     overflow     : hidden;
     border-radius: 50%;
-    height       : 250px;
-    width        : 250px;
-    margin-top   : 20px;
+    height       : 200px;
+    width        : 200px;
+    margin-top   : 40px;
+    margin-bottom: 30px;
     margin-left  : auto;
     margin-right : auto;
 }
@@ -27,33 +28,35 @@
 /*** FONTS, STYLE ET COULEURS ***/
 
 #header,
-#informations h2,
-footer {
+#aside h2 {
     font-family: 'AkiraExpanded';
 }
 
-#mainContent {
+#aside,
+#main {
     font-family: 'Titillium Web';
 }
 
-#header h1 {
+#header h1,
+#hobbies i {
     font-size: 1.5em;
 }
 
-#header p,
-#informations h2,
-.sectionTitle h2 {
-    font-size: 1.2em;
-}
 
-#informations,
-#footer a,
+#aside,
 .content {
     font-size: 0.85em;
 }
 
+#header p,
+#aside h2,
+.sectionTitle h2 {
+    font-size: 1.1em;
+}
+
 #header,
-#mainContent h2 {
+#aside h2,
+#main h2 {
     text-align    : center;
     text-transform: uppercase;
 }
@@ -63,37 +66,32 @@ footer {
     text-decoration-color: rgb(30, 136, 229);
 }
 
-#header,
-#informations h2,
-#informations a:hover,
-#footer a,
-#informations i.fas,
-#contact i.fab {
-    color: whitesmoke;
-}
-
-#footer a:hover,
-#sectionContent i.fas,
-#sectionContent i.far,
+#footer i:hover,
+#main i,
 .blueFont {
     color: rgb(30, 136, 229);
 }
 
-#informations a {
+#header,
+#aside h2,
+#aside a:hover,
+#aside i {
+    color: whitesmoke;
+}
+
+#footer i,
+#aside a {
     color: rgb(66, 66, 66);
 }
 
-#informations,
-#sectionContent li::before {
+#aside {
     background-color: rgb(30, 136, 229);
+    justify-content : space-around;
 }
 
 #header,
-#informations h2,
-footer,
-#contact i.fas,
-#hobbies i.fas,
-#contact i.fab {
+#aside h2,
+#aside i {
     background-color: rgb(66, 66, 66);
 }
 
@@ -121,76 +119,82 @@ footer,
     justify-content: space-around;
 }
 
-#contact i.fas,
-#contact i.fab,
-#hobbies i.fas {
+#aside i {
     display    : inline-flex;
     align-items: center;
 }
 
-#contact i.fas,
-#contact i.fab {
+#hobbies i {
+    width        : 45px;
+    height       : 45px;
+    border-radius: 50%;
+    margin       : 1.5%;
+}
+
+#contact i {
     width        : 30px;
     height       : 30px;
     border-radius: 25%;
-    margin       : 20px;
-}
-
-#hobbies i.fas {
-    width        : 65px;
-    height       : 65px;
-    border-radius: 50%;
+    margin       : 2.5%;
 }
 
 .content-description {
-    margin-left  : 39px;
+    margin-left  : 53.5px;
     margin-top   : -15px;
     margin-bottom: 25px;
     padding-right: 20px;
 }
 
+#contact p {
+    min-width   : 275px;
+    max-width   : 300px;
+    margin-left : auto;
+    margin-right: auto;
+}
+
 #about p {
-    margin    : 5%;
     text-align: justify;
 }
 
 /*** LISTES ***/
 
-#sectionContent ul li {
+
+#main ul li {
     list-style-type: none;
-    margin-left    : -20px;
+    margin-left    : -40px;
 }
 
-#sectionContent ul ul li {
-    margin-left: -40px;
-}
-
-#hobbiesIcons,
+#header,
 #footer {
     padding: 20px;
 }
 
 #footer,
-#contact i.fas,
-#hobbies i.fas,
-#contact i.fab {
+#aside i {
     justify-content: center;
 }
 
-#footer a {
-    display    : block;
-    margin-left: -12.5px;
-}
-
-#informations a,
+#aside a,
 #footer a {
     text-decoration: none;
 }
 
-#sectionContent i.fas,
-#sectionContent i.far {
-    padding-top : 22px;
-    margin-right: 10px;
+
+
+.content i {
+    margin-top  : 17.5px;
+    margin-left : 20px;
+    margin-right: 20px;
+}
+
+.sectionTitle i {
+    margin-top  : 25px;
+    margin-right: 12.5px;
+    font-size   : 1.25em;
+}
+
+hr {
+    margin-bottom: 30px;
 }
 
 
@@ -201,114 +205,136 @@ footer,
 @media only screen and (min-width: 650px) {
 
     #header h1 {
-        font-size: 2.5em;
+        font-size: 2em;
+    }
+
+    #aside,
+    .content {
+        font-size: 1em;
     }
 
     #header p,
-    #informations h2,
+    #aside h2,
     .sectionTitle h2 {
-        font-size: 1.5em;
-    }
-
-    #informations,
-    #footer a,
-    .content {
-        font-size: 1em;
+        font-size: 1.25em;
     }
 
     .content {
         flex-direction: row;
     }
 
-    .content div {
-        width: 50%;
-    }
-
-    #informations {
-        min-width: 35%;
-    }
-
-    #contact p {
-        width       : 325px;
-        margin-left : auto;
-        margin-right: auto;
+    .content div:first-child {
+        min-width: 50%;
     }
 
     .content-description {
-        margin-left  : unset;
-        margin-top   : unset;
-        margin-bottom: unset;
+        margin-left: unset;
+        margin-top : -5px;
     }
 
-    #sectionContent i.fas,
-    #sectionContent i.far {
+    .sectionTitle i {
+        font-size   : 1.5em;
         margin-right: 20px;
+        margin-top  : 30px;
     }
+
+    #contact i {
+        width    : 35px;
+        height   : 35px;
+        font-size: 1.1em;
+    }
+
+    #hobbies i {
+        font-size: 1.7em;
+        width    : 55px;
+        height   : 55px;
+    }
+
+    .content i {
+        margin-top: 21px;
+    }
+
 }
 
 /*******************/
 /*** ordinateurs ***/
 /*******************/
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
 
-    #mainContent,
-    .content {
+    #pageContent {
         flex-direction: row;
+        flex-wrap     : wrap;
+    }
+
+    #header,
+    #main {
+        width        : 100%;
+        padding-left : unset;
+        padding-right: unset;
+    }
+
+    #aside {
+        order   : 1;
+        width   : 30%;
+        height  : 100%;
+        position: sticky;
+        top     : 0px;
+    }
+
+    #rightColumn {
+        order       : 2;
+        width       : 60%;
+        margin-left : auto;
+        margin-right: auto;
     }
 
     #header {
-        width           : 100%;
-        height          : 200px;
+        order           : 2;
+        text-align      : left;
         color           : rgb(66, 66, 66);
         background-color: unset;
-        margin-bottom   : 2.5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     #header h1 {
-        font-size: 3.5em;
+        font-size: 3em;
     }
 
     #header p {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
-    #header h1,
-    #header p,
-    #sectionContent h2 {
-        text-align: left;
+    hr {
+        margin-top: -15px;
     }
 
-    #contact p {
-        width: 100%;
-    }
-
-    #informations {
-        min-width: unset;
-        max-width: 25%;
-        position : sticky;
-        top      : 0;
-        height   : 100%;
-    }
-
-    #sectionContent {
-        margin     : 1.5%;
-        margin-left: 7.5%;
-        order      : 2;
-        width      : auto;
+    .sectionTitle h2 {
+        font-size: 1.5em;
     }
 
     .sectionTitle {
-        justify-content: start;
-    }
-
-    #sectionContent ul li {
-        margin-left: -40px;
+        justify-content: left;
 
     }
 
-    .content-description{
-        margin-left: -75px;
+    .content i {
+        margin-left: unset;
     }
 
+    #footer {
+        order          : 3;
+        justify-self   : end;
+        width          : 100%;
+        justify-content: end;
+    }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+    #aside {
+        width: 20%;
+    }
 }
